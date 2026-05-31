@@ -160,3 +160,9 @@ The finished installer will be bundled at:
 
 ## 🔒 100% Private, Local, and Secure
 AetherPhotos is completely offline. It **never** transmits your photo hashes, filenames, metadata, or coordinates to the internet. All calculations are executed solely on your CPU and local disks. Your memories stay entirely yours.
+
+---
+
+## 📄 License
+This project is open-source and free to use under the terms of the [MIT License](LICENSE).
+
