@@ -1,3 +1,9 @@
+use std::sync::Mutex;
+use tauri::Manager;
+use tauri_plugin_shell::process::CommandChild;
+
+struct SidecarState(Mutex<Option<CommandChild>>);
+
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -16,11 +22,26 @@ pub fn run() {
             
             // Spawn the sidecar photos-backend
             let sidecar = app.shell().sidecar("photos-backend").unwrap();
-            let (_rx, _child) = sidecar.spawn().unwrap();
+            let (_rx, child) = sidecar.spawn().unwrap();
+            
+            // Store the child handle in app state
+            app.manage(SidecarState(Mutex::new(Some(child))));
             
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");
+        .build(tauri::generate_context!())
+        .expect("error while building tauri application")
+        .run(|app_handle, event| {
+            match event {
+                tauri::RunEvent::ExitRequested { .. } | tauri::RunEvent::Exit => {
+                    let state = app_handle.state::<SidecarState>();
+                    let mut child = state.0.lock().unwrap();
+                    if let Some(process) = child.take() {
+                        let _ = process.kill(); // Terminate the sidecar cleanly
+                    }
+                }
+                _ => {}
+            }
+        });
 }

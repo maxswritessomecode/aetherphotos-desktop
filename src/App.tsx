@@ -356,10 +356,26 @@ function App() {
         })
       });
       if (response.ok) {
-        const data = await response.json();
-        setCopiedCount(data.stats.copied_count);
-        setExecProgress(100);
-        setExecStatus(noDryRun ? "Consolidation complete!" : "Dry-run complete!");
+        // Poll execute status in loop
+        let isComplete = false;
+        while (!isComplete) {
+          await new Promise((r) => setTimeout(r, 500));
+          const statusResp = await secureFetch(`${API_BASE}/execute/status`);
+          if (statusResp.ok) {
+            const data = await statusResp.json();
+            setCopiedCount(data.copied_count);
+            if (data.total_to_copy > 0) {
+              setExecProgress((data.copied_count / data.total_to_copy) * 100);
+            }
+            if (data.status === "completed") {
+              isComplete = true;
+              setExecStatus(noDryRun ? "Consolidation complete!" : "Dry-run complete!");
+            } else if (data.status === "failed") {
+              isComplete = true;
+              setExecStatus("Consolidation failed.");
+            }
+          }
+        }
         return;
       }
     } catch (e) {
