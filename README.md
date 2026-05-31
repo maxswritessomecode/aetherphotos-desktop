@@ -2,7 +2,7 @@
 
 > **A premium, 100% local-first, high-performance desktop application for photo de-duplication and centralization.**
 
-AetherPhotos safely scans, deduplicates, and consolidates your scattered photo archives from **macOS Photos Libraries**, **Amazon Photos Backups**, and **Google Takeout ZIP Archives** into a single, beautifully organized master backup folder.
+AetherPhotos safely scans, deduplicates, and consolidates your scattered photo archives from **macOS Photos Libraries**, **Amazon Photos Backups**, and **Google Takeout ZIP Archives (the official way to download all your Google Photos)** into a single, beautifully organized master backup folder.
 
 Built with a **Tauri v2 (Rust)** shell, a beautiful **React & TypeScript** glassmorphic frontend, and a compiled **Python FastAPI** pipeline engine running as a zero-latency native sidecar.
 
@@ -10,7 +10,7 @@ Built with a **Tauri v2 (Rust)** shell, a beautiful **React & TypeScript** glass
 
 ## 🗑️➡️🎒 Stop Kicking the Can Down the Road
 
-If you are like most of us, your digital memories are scattered in a dozen different messy places. You have a couple of old macOS Photos libraries on external drives, random backups uploaded to Amazon Photos, and a massive dump of fragmented, split-ZIP files from Google Takeout that you've been meaning to sort through.
+If you are like most of us, your digital memories are scattered in a dozen different messy places. You have a couple of old macOS Photos libraries on external drives, random backups uploaded to Amazon Photos, and a massive dump of fragmented, split-ZIP files from Google Takeout (which is the official service Google provides to download your entire Google Photos library) that you've been meaning to sort through.
 
 You've probably been **kicking this can down the road for years** because doing it manually is an absolute nightmare. It’s too messy, too time-consuming, and standard cloud tools make it incredibly difficult to decouple from their subscription lock-ins so you can just own and save your pictures the way you want to.
 
@@ -120,7 +120,7 @@ To download your photos from Amazon, use the official Amazon Photos desktop app 
 Open the application and specify the folders you want to scan:
 1.  **macOS Photos Library:** Select your standard `.photoslibrary` package (AetherPhotos handles package directory browsing seamlessly).
 2.  **Amazon Photos Directory:** Select your local Amazon backup folder.
-3.  **Google Takeout ZIP Folder:** Point directly to the folder containing your downloaded Takeout `.zip` files (no need to unzip them!).
+3.  **Google Takeout ZIP Folder:** Point directly to the folder containing your downloaded Google Takeout `.zip` files (Google Takeout is the official tool Google provides to download your entire Google Photos library—no need to unzip them!).
 4.  **Consolidated Target Folder:** Choose the external drive or directory where you want your new master master archive to live.
 
 ### Step 2: Scan & Hashing
