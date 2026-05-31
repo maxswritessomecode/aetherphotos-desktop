@@ -63,6 +63,57 @@ Destination/
 
 ---
 
+## 📥 Step-by-Step Guide: How to Get Your Photos
+
+To consolidate all your photos, you first need to download them to your computer. Here is the absolute simplest way to gather your Google and Amazon photos—even if you are completely non-technical.
+
+---
+
+### ☁️ Method A: How to Download from Google Photos (Google Takeout)
+
+Google Takeout allows you to request a complete export of all your photos and videos currently stored in Google Cloud.
+
+1.  **Go to Google Takeout:**
+    Open your web browser and navigate to [takeout.google.com](https://takeout.google.com). Log in with your Google account.
+2.  **Deselect All Other Data:**
+    By default, Google selects everything. Click the **Deselect all** button at the top of the list so you only export your photos.
+3.  **Select Google Photos Only:**
+    Scroll down the list until you find **Google Photos**, and check the box next to it.
+    *   *Tip:* You can click "All Photo albums included" to deselect specific years or trash folders if you want to speed up the download.
+4.  **Go to the Next Step:**
+    Scroll to the very bottom of the page and click **Next step**.
+5.  **Choose Delivery Method & Size:**
+    *   **Transfer to:** Keep it as **Send download link via email**.
+    *   **Frequency:** Keep it as **Export once**.
+    *   **File type & size:** Choose **.zip** and set the size limit to **50 GB** (this minimizes the number of zip files you have to download; choosing 2GB means you'll have dozens of separate files to click).
+6.  **Create Export:**
+    Click **Create export**. Google will start gathering your photos. Depending on the size of your library, this can take a few hours or up to a day.
+7.  **Download the ZIP Files:**
+    Google will email you when the export is ready. Go to the email, click the download links, and save the `.zip` files into a single folder on your computer (e.g. create a folder named `Google Takeout` inside your external drive).
+    *   *Do NOT unzip them!* AetherPhotos will stream the pictures directly from the ZIP files to save you hundreds of gigabytes of disk space.
+
+---
+
+### 📦 Method B: How to Download from Amazon Photos (Mac Desktop Client)
+
+To download your photos from Amazon, use the official Amazon Photos desktop app to sync everything directly to a folder on your Mac.
+
+1.  **Download Amazon Photos for Mac:**
+    Go to [amazon.com/photos/download](https://www.amazon.com/photos/download) on your web browser, download the desktop application, and install it on your Mac.
+2.  **Log In:**
+    Open the **Amazon Photos** app on your Mac and log in using your Amazon account details.
+3.  **Navigate to the Download Section:**
+    In the Amazon Photos window, click on the **Download** tab or select **Backup/Download Settings** in the app menu.
+4.  **Download Your Entire Library:**
+    *   Select **Download entire library** or select specific folders (like your phone backup album).
+    *   Choose a destination folder. *Highly recommended:* Choose a folder on your external drive (e.g., `/Volumes/YourDrive/Amazon Photos`) to avoid filling up your Mac's internal hard drive.
+5.  **Let the Sync Run:**
+    Click **Download**. The Amazon Photos app will run in your menu bar and download all your photos at full resolution. Wait until the sync status shows **Sync Complete**.
+6.  **Point AetherPhotos to this Folder:**
+    Once finished, open **AetherPhotos** and point the **Amazon Photos Directory** field directly to that synced folder.
+
+---
+
 ## ⚡ How to Use AetherPhotos
 
 ### Step 1: Connect Your Sources
