@@ -2,6 +2,8 @@
 
 > **A premium, 100% local-first, high-performance desktop application for photo de-duplication and centralization.**
 
+![AetherPhotos Desktop App Glassmorphic Interface](screenshot.png)
+
 AetherPhotos safely scans, deduplicates, and consolidates your scattered photo archives from **macOS Photos Libraries**, **Amazon Photos Backups**, and **Google Takeout ZIP Archives (the official way to download all your Google Photos)** into a single, beautifully organized master backup folder.
 
 Built with a **Tauri v2 (Rust)** shell, a beautiful **React & TypeScript** glassmorphic frontend, and a compiled **Python FastAPI** pipeline engine running as a zero-latency native sidecar.
