@@ -2,7 +2,8 @@
 
 > **A premium, 100% local-first, high-performance desktop application for photo de-duplication and centralization.**
 
-![AetherPhotos Desktop App Glassmorphic Interface](screenshot.png)
+![AetherPhotos Desktop App Glassmorphic Interface](docs/screenshots/copy_progress_active.png)
+
 
 AetherPhotos safely scans, deduplicates, and consolidates your scattered photo archives from **macOS Photos Libraries**, **Amazon Photos Backups**, and **Google Takeout ZIP Archives (the official way to download all your Google Photos)** into a single, beautifully organized master backup folder.
 
@@ -125,8 +126,12 @@ Open the application and specify the folders you want to scan:
 3.  **Google Takeout ZIP Folder:** Point directly to the folder containing your downloaded Google Takeout `.zip` files (Google Takeout is the official tool Google provides to download your entire Google Photos library—no need to unzip them!).
 4.  **Consolidated Target Folder:** Choose the external drive or directory where you want your new master master archive to live.
 
+![Step 1: Connect Your Photo Sources](docs/screenshots/connect_sources.png)
+
 ### Step 2: Scan & Hashing
 Click **Start Scan & Hashing**. AetherPhotos will launch its background engine, showing a pulsing sonar radar as it walks your sources, builds file content hashes, and indexes them into a local, temporary SQLite registry.
+
+![Step 2: Pulse Radar Scan & Hashing](docs/screenshots/scanning_progress.png)
 
 ### Step 3: Clutter & Duplicate Analysis
 Once the scan finishes, AetherPhotos presents a breakdown of your files:
@@ -135,9 +140,13 @@ Once the scan finishes, AetherPhotos presents a breakdown of your files:
 *   Total duplicates identified.
 *   **Exact storage space reclaimable** by omitting the duplicates.
 
+![Step 3: Storage Reclaimable & Duplicate Breakdown Report](docs/screenshots/clutter_report.png)
+
 ### Step 4: Centralize & Copy
 *   **🔍 Dry-Run:** Performs a full simulation of the copy process to verify file structures and metadata without writing anything to disk.
 *   **🚀 Centralize & Copy:** Safely executes the copy operation with a real-time progress bar displaying files copied, files processed, and any errors.
+
+![Step 4: Active Safe Centralization & Copy Progress](docs/screenshots/copy_progress_active.png)
 
 ---
 
