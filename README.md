@@ -1,5 +1,7 @@
 # 📷 AetherPhotos Desktop App
 
+<img width="1096" height="889" alt="image" src="https://github.com/user-attachments/assets/96d6dfff-f953-41b0-84f6-6da115e6c6a8" />
+
 > **A premium, 100% local-first, high-performance desktop application for photo de-duplication and centralization.**
 
 
